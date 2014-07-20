@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2943956-c490-4770-9156-40cd3253363e" name="Default" comment="" />
+    <list default="true" id="d2943956-c490-4770-9156-40cd3253363e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/greedy/ClusterFinder.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/greedy/ClusterFinderSpec.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/unionfind/OptimizedUnionFind.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/unionfind/UnionFind.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/unionfind/UnionFindSpec.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering3.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering4.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering5.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering_big.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/graphs/Graph.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/graphs/Graph.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/graphs/GraphSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/graphs/GraphSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Algorithms.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,28 +79,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JobScheduler.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/greedy/JobScheduler.scala">
+      <file leaf-file-name="UnionFind.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/unionfind/UnionFind.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="56" selection-start="867" selection-end="965" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="600">
+            <state line="22" column="43" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JobSchedulerSpec.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/greedy/JobSchedulerSpec.scala">
+      <file leaf-file-name="OptimizedUnionFind.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/unionfind/OptimizedUnionFind.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="153" selection-start="590" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="600">
+            <state line="8" column="96" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="645">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Graph.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/graphs/Graph.scala">
+      <file leaf-file-name="ClusterFinder.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/greedy/ClusterFinder.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="28" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1275">
+            <state line="27" column="77" selection-start="1170" selection-end="1170" vertical-scroll-proportion="1.0424929" vertical-offset="37" max-vertical-offset="870">
+              <folding>
+                <element signature="e#40#83#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClusterFinderSpec.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/greedy/ClusterFinderSpec.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="34" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="960">
               <folding>
                 <element signature="e#40#81#0" expanded="true" />
               </folding>
@@ -93,46 +119,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edges1.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/graphs/edges1.txt">
+      <file leaf-file-name="clustering5.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering5.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="35" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+            <state line="0" column="10" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraphSpec.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/graphs/GraphSpec.scala">
+      <file leaf-file-name="clustering4.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering4.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="31" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.76993865" vertical-offset="124" max-vertical-offset="555">
+            <state line="6" column="13" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edges.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/graphs/edges.txt">
+      <file leaf-file-name="clustering3.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering3.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32865">
+            <state line="6" column="13" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.sbt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.sbt">
+      <file leaf-file-name="clustering2.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering2.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="39" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="225">
+            <state line="45" column="11" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jobs.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/jobs.txt">
+      <file leaf-file-name="clustering1.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering1.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="149890" max-vertical-offset="150105">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1871355">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnionFindSpec.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/unionfind/UnionFindSpec.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="24" selection-start="1298" selection-end="1298" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="750">
               <folding />
             </state>
           </provider>
@@ -158,8 +193,17 @@
         <option value="$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/greedy/JobScheduler.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/greedy/JobSchedulerSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/graphs/edges1.txt" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/graphs/Graph.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/graphs/GraphSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering2.txt" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/unionfind/UnionFind.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/unionfind/OptimizedUnionFind.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/graphs/Graph.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/unionfind/UnionFindSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering3.txt" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/greedy/ClusterFinder.scala" />
+        <option value="$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering4.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering5.txt" />
+        <option value="$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/greedy/ClusterFinderSpec.scala" />
       </list>
     </option>
   </component>
@@ -194,6 +238,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -241,6 +286,40 @@
               <option name="myItemId" value="algorithms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unionfind" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithms-II" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="greedy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -297,6 +376,10 @@
               <option name="myItemId" value="algorithms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="greedy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -323,9 +406,69 @@
               <option name="myItemId" value="algorithms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="graphs" />
+              <option name="myItemId" value="Algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithms-II" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unionfind" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithms-II" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unionfind" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OptimizedUnionFind.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -357,10 +500,6 @@
               <option name="myItemId" value="greedy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JobScheduler.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -391,6 +530,10 @@
               <option name="myItemId" value="graphs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Graph.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -417,7 +560,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -437,11 +579,9 @@
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="org.venustus.algorithms.greedy" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy" />
       <recent name="$PROJECT_DIR$/src/main/resources/org/venustus/algorithms/greedy" />
@@ -449,11 +589,59 @@
       <recent name="$PROJECT_DIR$/src/main/scala" />
       <recent name="$PROJECT_DIR$/src/org/venustus/algorithms/greedy" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.venustus.algorithms.greedy" />
+    </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.GraphSpec">
+  <component name="RunManager" selected="ScalaTest.ClusterFinderSpec">
     <configuration default="false" name="GraphSpec" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <module name="Algorithms" />
       <setting name="path" value="org.venustus.algorithms.graphs.GraphSpec" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="-Djava.util.Arrays.useLegacyMergeSort=true" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="UnionFindSpec" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="Algorithms" />
+      <setting name="path" value="org.venustus.algorithms.unionfind.UnionFindSpec" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="-Djava.util.Arrays.useLegacyMergeSort=true" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="UnionFindSpec.Simple union find data structure should return correct leaders after some unions" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="Algorithms" />
+      <setting name="path" value="org.venustus.algorithms.unionfind.UnionFindSpec" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="-Djava.util.Arrays.useLegacyMergeSort=true" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="Simple union find data structure should return correct leaders after some unions" />
+      <setting name="testKind" value="Test name" />
+      <setting name="showProgressMessages" value="true" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ClusterFinderSpec" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="Algorithms" />
+      <setting name="path" value="org.venustus.algorithms.greedy.ClusterFinderSpec" />
       <setting name="package" value="" />
       <setting name="vmparams" value="-Djava.util.Arrays.useLegacyMergeSort=true" />
       <setting name="params" value="" />
@@ -649,14 +837,20 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="ScalaTest.JobSchedulerSpec.A sub-optimal job scheduler with weight difference as optimization function should return sub-optimal schedule" />
       <item index="1" class="java.lang.String" itemvalue="ScalaTest.JobSchedulerSpec" />
       <item index="2" class="java.lang.String" itemvalue="ScalaTest.GraphSpec" />
+      <item index="3" class="java.lang.String" itemvalue="ScalaTest.UnionFindSpec" />
+      <item index="4" class="java.lang.String" itemvalue="ScalaTest.UnionFindSpec.Simple union find data structure should return correct leaders after some unions" />
+      <item index="5" class="java.lang.String" itemvalue="ScalaTest.ClusterFinderSpec" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="ScalaTest.GraphSpec" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="ScalaTest.ClusterFinderSpec" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.GraphSpec" />
+        <item index="2" class="java.lang.String" itemvalue="ScalaTest.UnionFindSpec" />
+        <item index="3" class="java.lang.String" itemvalue="ScalaTest.UnionFindSpec.Simple union find data structure should return correct leaders after some unions" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -758,7 +952,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -774,13 +968,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41025642" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27963525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3028846" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -806,6 +1000,118 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/greedy/JobScheduler.scala">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="104" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/greedy/JobSchedulerSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="153" selection-start="590" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/graphs/Graph.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="32" selection-start="1891" selection-end="1891" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/graphs/edges1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="35" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/graphs/GraphSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="47" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/graphs/edges.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="39" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/jobs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/greedy/JobScheduler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="104" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/greedy/JobSchedulerSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="153" selection-start="590" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/graphs/Graph.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="32" selection-start="1891" selection-end="1891" vertical-scroll-proportion="0.0" vertical-offset="589" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/graphs/edges1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="35" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/graphs/GraphSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="47" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0" vertical-offset="229" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/graphs/edges.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="39" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/jobs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/greedy/JobScheduler.scala">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="34" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
           <folding />
         </state>
@@ -820,9 +1126,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithms.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="79" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="630">
-          <folding />
-        </state>
+        <state line="12" column="79" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="630" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.sbt">
@@ -851,14 +1155,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithms.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="79" selection-start="736" selection-end="736" vertical-scroll-proportion="0.28767124" vertical-offset="12" max-vertical-offset="630">
-          <folding />
-        </state>
+        <state line="12" column="79" selection-start="736" selection-end="736" vertical-scroll-proportion="0.28767124" vertical-offset="12" max-vertical-offset="630" />
       </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/src.zip!/java/util/TimSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="867" column="0" selection-start="32860" selection-end="32860" vertical-scroll-proportion="6.04886" vertical-offset="10803" max-vertical-offset="13665">
+        <state line="867" column="0" selection-start="32860" selection-end="32860" vertical-scroll-proportion="6.04886" vertical-offset="10803" max-vertical-offset="13665" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/greedy/JobScheduler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="104" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="600">
           <folding />
         </state>
       </provider>
@@ -872,21 +1179,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="39" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/greedy/JobSchedulerSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="153" selection-start="590" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="600">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/greedy/JobScheduler.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="56" selection-start="867" selection-end="965" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="600">
+        <state line="8" column="39" selection-start="166" selection-end="166" vertical-scroll-proportion="0.20942408" vertical-offset="0" max-vertical-offset="573">
           <folding />
         </state>
       </provider>
@@ -905,19 +1198,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/greedy/JobSchedulerSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="153" selection-start="590" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/graphs/GraphSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="21" selection-start="929" selection-end="1346" vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1871355">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="11" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/graphs/Graph.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="28" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1275">
+        <state line="67" column="40" selection-start="3088" selection-end="3088" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/unionfind/UnionFind.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="43" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/unionfind/OptimizedUnionFind.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="96" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/unionfind/UnionFindSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="24" selection-start="1298" selection-end="1298" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/org/venustus/algorithms/greedy/clustering5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="10" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/greedy/ClusterFinderSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="34" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="960">
           <folding>
             <element signature="e#40#81#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/org/venustus/algorithms/graphs/GraphSpec.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/venustus/algorithms/greedy/ClusterFinder.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="31" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.76993865" vertical-offset="124" max-vertical-offset="555">
-          <folding />
+        <state line="27" column="77" selection-start="1170" selection-end="1170" vertical-scroll-proportion="1.0424929" vertical-offset="37" max-vertical-offset="870">
+          <folding>
+            <element signature="e#40#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

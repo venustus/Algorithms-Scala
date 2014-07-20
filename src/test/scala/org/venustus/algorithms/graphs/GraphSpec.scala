@@ -17,8 +17,11 @@ class GraphSpec extends FlatSpec with Matchers {
     }
 
     it should "return correct minimum spanning tree" in {
-        (simpleGraph getMinimumSpanningTree(1)).toSet should be (Set(((1, 2), 1), ((2, 3), 2), ((3, 4), 3)))
+        (simpleGraph getMinimumSpanningTree (1)).toSet should be (Set(((1, 2), 1), ((2, 3), 2), ((3, 4), 3)))
+        (simpleGraph.getMinimumSpanningTree).toSet should be (Set(((1, 2), 1), ((2, 3), 2), ((3, 4), 3)))
+    }
 
+    "Decent sized graph" should "give correct cost for minimum spanning tree" in {
         val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Coursera/Algorithms-II/src/test/resources/org/venustus/algorithms/graphs/edges.txt").getLines.toList.tail
         val graph =
             UndirectedGraph[Int](lines map ((s: String) => {
@@ -26,6 +29,12 @@ class GraphSpec extends FlatSpec with Matchers {
                 Pair(Pair(edgeElems(0).toInt, edgeElems(1).toInt), edgeElems(2).toInt)
             }))
         println("Graph has " + graph.numVertices + " vertices and " + graph.numEdges + " edges")
-        println("Cost of minimum spanning tree: " + graph.getMinimumSpanningTree(1).foldLeft(0)((acc: Int, edge: Graph.Edge[Int]) => acc + edge._2))
+        val minimumSpanningTreeCost = (graph getMinimumSpanningTree (1)).foldLeft(0)((acc: Int, edge: Graph.Edge[Int]) => acc + edge._2)
+        println("Cost of minimum spanning tree: " + minimumSpanningTreeCost)
+        minimumSpanningTreeCost should be (-3612829)
+
+        val kruskalsMinimumSpanningTree = graph.getMinimumSpanningTree
+        val kruskalsMinimumSpanningTreeCost = kruskalsMinimumSpanningTree.foldLeft(0)((acc: Int, edge: Graph.Edge[Int]) => acc + edge._2)
+        kruskalsMinimumSpanningTreeCost should be (-3612829)
     }
 }
