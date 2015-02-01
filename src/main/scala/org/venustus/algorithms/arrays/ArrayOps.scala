@@ -127,4 +127,29 @@ object ArrayOps {
         })
         (finalStart, finalEnd, finalMax)
     }
+
+    /**
+     * Given a list of elements in which all elements except one, occur in pairs,
+     * finds out the one that doesn't have a pair.
+     *
+     * Algorithm:
+     * 1) Create an empty set.
+     * 2) Loop through the elements in the list and check if each element is already in the set.
+     * 3) If already in the set, remove from the set, otherwise add it.
+     * 4) At the end of the loop, this set should contain the lone element.
+     *
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
+     *
+     * @param ls
+     * @tparam T
+     * @return
+     */
+    def findLoneElement[T](ls: List[T]): T = {
+        val s = (Set[T]() /: ls)((acc, elem) => {
+            if (acc contains (elem)) acc - elem
+            else acc + elem
+        })
+        s.head
+    }
 }
