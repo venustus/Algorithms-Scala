@@ -66,7 +66,7 @@ object SCypher {
             case None => acc
         })
 
-        val comparisonGraph = DirectedGraph[Char](validCharPairs)
+        val comparisonGraph = new DirectedGraph[Char](validCharPairs)
         val sortOrder = comparisonGraph getTopologicalSortOrdering
 
         def checkTotalOrdering(chls: List[Char]): Boolean = {

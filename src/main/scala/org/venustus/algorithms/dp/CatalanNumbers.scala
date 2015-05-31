@@ -5,6 +5,24 @@ package org.venustus.algorithms.dp
  */
 object CatalanNumbers {
 
+    /**
+     * Computes nth catalan number.
+     *
+     * Catalan number is given by the recursive relation:
+     *
+     * C_0 = 1
+     * C_n+1 = Sum over all 0 to n (c_i * c_n-i)
+     *
+     * Algorithm:
+     *
+     * The optimal sub structure and overlapping sub problems are obvious in this problem.
+     * We maintain an array of integers of size n + 1 and iteratively compute larger and larger catalan numbers.
+     *
+     * Time complexity: O(n)
+     *
+     * @param n
+     * @return
+     */
     def getNthCatalanNumber(n: Int) = {
         if(n == 0 || n == 1) 1
         else {

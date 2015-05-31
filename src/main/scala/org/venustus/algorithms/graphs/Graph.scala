@@ -152,7 +152,7 @@ case class UndirectedGraph[T](edgeList: List[Graph.Edge[T]])
         extends Graph[T](Graph.constructAdjacencyList[T](edgeList, false), false) {
 }
 
-case class DirectedGraph[T](edgeList: List[Graph.Edge[T]])
+class DirectedGraph[T](edgeList: List[Graph.Edge[T]])
         extends Graph[T](Graph.constructAdjacencyList[T](edgeList, true), true) {
 
     val nodesReverse = (new scala.collection.mutable.HashMap[T, List[Neighbor[T]]] /: edges)((acc, edge) => {
@@ -236,6 +236,18 @@ case class DirectedGraph[T](edgeList: List[Graph.Edge[T]])
     def getTopologicalSortOrdering: Vector[T] = {
         val (_, finishTimesOrder) = depthFirstSearch
         finishTimesOrder
+    }
+}
+
+case class Tree[T](edgeList: List[Graph.Edge[T]])
+        extends DirectedGraph[T](edgeList) {
+    private val potentialRoot = nodes find { case (n, edges) => {
+            edges.size == 0
+        }
+    }
+    val root = potentialRoot match {
+        case None => throw new IllegalArgumentException("Invalid input for a tree")
+        case Some(x) => x._1
     }
 }
 
