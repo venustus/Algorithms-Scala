@@ -14,7 +14,7 @@ class JobSchedulerSpec extends FlatSpec with Matchers {
     def ratioCompFunc(j1: Job, j2: Job) = {
         (j1.weight.toDouble / j1.length.toDouble) >= (j2.weight.toDouble / j2.length.toDouble)
     }
-    val scheduler = JobSchedulerFactory("file:///Users/venkat/Documents/Coursera/Algorithms-II/src/test/resources/org/venustus/algorithms/greedy/jobs.txt")
+    val scheduler = JobSchedulerFactory("file:///Users/venkat/Documents/Projects/Algorithms/src/test/resources/org/venustus/algorithms/greedy/jobs.txt")
 
     "Testing job scheduler" should "return correct sum of weighted completion times" in {
         val scheduler2 = new JobScheduler(List(Job(1, 2), Job(2, 3), Job(3, 1)))

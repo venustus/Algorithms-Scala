@@ -13,12 +13,16 @@ object Color extends Enumeration {
 }
 import Color._
 
-abstract class Graph[T](nodesNEdges: Pair[scala.collection.Map[T, List[Neighbor[T]]], List[Graph.Edge[T]]], isDirected: Boolean) {
+abstract class Graph[T](nodesNEdges: Pair[scala.collection.Map[T, List[Graph.Neighbor[T]]], List[Graph.Edge[T]]], isDirected: Boolean) {
     val nodes = nodesNEdges._1
     val edges = nodesNEdges._2
     val numVertices = nodes.size
     val numEdges = edges.size
     val directed: Boolean = isDirected
+
+    def addNode(t: T): Graph[T]
+
+    def addEdge(e: Graph.Edge[T]): Graph[T]
 
     def isConnected: Boolean = {
         depthFirstIterate(List[T](nodes.head._1), new scala.collection.mutable.HashMap[T, Color], Vector[T]())._2.size == numVertices
@@ -148,18 +152,53 @@ abstract class Graph[T](nodesNEdges: Pair[scala.collection.Map[T, List[Neighbor[
     }
 }
 
-case class UndirectedGraph[T](edgeList: List[Graph.Edge[T]])
-        extends Graph[T](Graph.constructAdjacencyList[T](edgeList, false), false) {
+case class UndirectedGraph[T](nodesAndEdges: Pair[scala.collection.Map[T, List[Graph.Neighbor[T]]], List[Graph.Edge[T]]])
+        extends Graph[T](nodesAndEdges, false) {
+
+    def this(edgeList: List[Graph.Edge[T]]) = {
+        this(Graph.constructAdjacencyList[T](edgeList, false))
+    }
+
+    override def addNode(t: T): UndirectedGraph[T] = new UndirectedGraph((nodes updated (t, List()), edges))
+
+    override def addEdge(e: Graph.Edge[T]): UndirectedGraph[T] = {
+        e match {
+            case ((from, to), weight) => {
+                val neighbors = nodes getOrElse (from, List())
+                val reverseNeighbors = nodes getOrElse (to, List())
+                new UndirectedGraph(
+                    ((nodes updated (from, (to, weight) :: neighbors)) updated (to, (from, weight) :: reverseNeighbors),
+                    e :: edges))
+            }
+        }
+    }
 }
 
-class DirectedGraph[T](edgeList: List[Graph.Edge[T]])
-        extends Graph[T](Graph.constructAdjacencyList[T](edgeList, true), true) {
+class DirectedGraph[T](nodesAndEdges: Pair[scala.collection.Map[T, List[Neighbor[T]]], List[Graph.Edge[T]]])
+        extends Graph[T](nodesAndEdges, true) {
+
+    def this(edgeList: List[Graph.Edge[T]]) = {
+        this(Graph.constructAdjacencyList[T](edgeList, true))
+    }
 
     val nodesReverse = (new scala.collection.mutable.HashMap[T, List[Neighbor[T]]] /: edges)((acc, edge) => {
         val ((vertex1, vertex2), cost) = edge
         acc put (vertex2, (vertex1, cost) :: (acc getOrElse (vertex2, List())))
         acc
     })
+
+    override def addNode(t: T) = new DirectedGraph((nodes updated (t, List()), edges))
+
+    override def addEdge(e: Graph.Edge[T]) = {
+        e match {
+            case ((from, to), weight) => {
+                val neighbors = nodes getOrElse (from, List())
+                new DirectedGraph(
+                    (nodes updated (from, (to, weight) :: neighbors),
+                    e :: edges))
+            }
+        }
+    }
 
     def getFinishingTimes(start: T): Vector[T] =
         depthFirstIterateReverse(List[T](start), new scala.collection.mutable.HashMap[T, Color], Vector[T]())._2

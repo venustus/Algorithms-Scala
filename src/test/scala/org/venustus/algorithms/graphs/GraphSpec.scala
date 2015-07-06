@@ -6,7 +6,7 @@ import org.scalatest.{Matchers, FlatSpec}
  * Created by venkat on 13/07/14.
  */
 class GraphSpec extends FlatSpec with Matchers {
-    val simpleGraph = UndirectedGraph[Int](List(((1, 2), 1), ((2, 3), 2), ((3, 4), 3), ((4, 1), 4), ((1, 3), 5)))
+    val simpleGraph = new UndirectedGraph[Int](List(((1, 2), 1), ((2, 3), 2), ((3, 4), 3), ((4, 1), 4), ((1, 3), 5)))
     val simpleDirectedGraph = new DirectedGraph[Int](List(((1, 2), 1), ((2, 3), 2), ((3, 4), 3), ((4, 1), 4), ((1, 3), 5)))
     val simpleDisconnectedDirectedGraph = new DirectedGraph[Int](List(((1, 2), 1), ((2, 3), 2), ((3, 4), 3), ((4, 1), 4), ((1, 3), 5),
         ((5, 2), 5), ((5, 3), 5)))
@@ -39,7 +39,7 @@ class GraphSpec extends FlatSpec with Matchers {
     }
 
     "Kosaraju's algorithm for finding strongly connected components" should "return correct components" in {
-        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Coursera/Algorithms-II/src/test/resources/org/venustus/algorithms/graphs/SCC.txt").getLines.toList
+        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Projects/Algorithms/src/test/resources/org/venustus/algorithms/graphs/SCC.txt").getLines.toList
         val graph =
             new DirectedGraph[Int](lines map ((s: String) => {
                 val edgeElems: Array[String] = s.split(' ')
@@ -57,7 +57,7 @@ class GraphSpec extends FlatSpec with Matchers {
     }
 
     it should "return correct components for medium sized graph" in {
-        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Coursera/Algorithms-II/src/test/resources/org/venustus/algorithms/graphs/SCC_test1.txt").getLines.toList
+        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Projects/Algorithms/src/test/resources/org/venustus/algorithms/graphs/SCC_test1.txt").getLines.toList
         val graph =
             new DirectedGraph[Int](lines map ((s: String) => {
                 val edgeElems: Array[String] = s.split(' ')
@@ -75,9 +75,9 @@ class GraphSpec extends FlatSpec with Matchers {
     }
 
     "Decent sized graph" should "give correct cost for minimum spanning tree" in {
-        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Coursera/Algorithms-II/src/test/resources/org/venustus/algorithms/graphs/edges.txt").getLines.toList.tail
+        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Projects/Algorithms/src/test/resources/org/venustus/algorithms/graphs/edges.txt").getLines.toList.tail
         val graph =
-            UndirectedGraph[Int](lines map ((s: String) => {
+            new UndirectedGraph[Int](lines map ((s: String) => {
                 val edgeElems: Array[String] = s.split(' ')
                 Pair(Pair(edgeElems(0).toInt, edgeElems(1).toInt), edgeElems(2).toInt)
             }))
@@ -92,7 +92,7 @@ class GraphSpec extends FlatSpec with Matchers {
     }
 
     "Simple graph" should "give correct all pairs shortest paths" in {
-        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Coursera/Algorithms-II/src/test/resources/org/venustus/algorithms/graphs/graph_apsp1.txt").getLines.toList.tail
+        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Projects/Algorithms/src/test/resources/org/venustus/algorithms/graphs/graph_apsp1.txt").getLines.toList.tail
         val graph =
             new DirectedGraph[Int](lines map ((s: String) => {
                 val edgeElems: Array[String] = s.split(' ')
@@ -103,7 +103,7 @@ class GraphSpec extends FlatSpec with Matchers {
     }
 
     "Simple graph with negative cycle" should "throw NegativeCostCycleException" in {
-        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Coursera/Algorithms-II/src/test/resources/org/venustus/algorithms/graphs/graph_apsp2.txt").getLines.toList.tail
+        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Projects/Algorithms/src/test/resources/org/venustus/algorithms/graphs/graph_apsp2.txt").getLines.toList.tail
         val graph =
             new DirectedGraph[Int](lines map ((s: String) => {
                 val edgeElems: Array[String] = s.split(' ')
@@ -116,7 +116,7 @@ class GraphSpec extends FlatSpec with Matchers {
     }
 
     "Large graph 1" should "give correct all pairs shortest paths" in {
-        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Coursera/Algorithms-II/src/test/resources/org/venustus/algorithms/graphs/edges.txt").getLines.toList.tail
+        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Projects/Algorithms/src/test/resources/org/venustus/algorithms/graphs/edges.txt").getLines.toList.tail
         val graph =
             new DirectedGraph[Int](lines map ((s: String) => {
                 val edgeElems: Array[String] = s.split(' ')
@@ -127,7 +127,7 @@ class GraphSpec extends FlatSpec with Matchers {
     }
 
     "Large graph 2" should "give correct all pairs shortest paths" in {
-        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Coursera/Algorithms-II/src/test/resources/org/venustus/algorithms/graphs/graph_apsp_g1.txt").getLines.toList.tail
+        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Projects/Algorithms/src/test/resources/org/venustus/algorithms/graphs/graph_apsp_g1.txt").getLines.toList.tail
         val graph =
             new DirectedGraph[Int](lines map ((s: String) => {
                 val edgeElems: Array[String] = s.split(' ')
@@ -140,7 +140,7 @@ class GraphSpec extends FlatSpec with Matchers {
     }
 
     "Large graph 3" should "give correct all pairs shortest paths" in {
-        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Coursera/Algorithms-II/src/test/resources/org/venustus/algorithms/graphs/graph_apsp_g2.txt").getLines.toList.tail
+        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Projects/Algorithms/src/test/resources/org/venustus/algorithms/graphs/graph_apsp_g2.txt").getLines.toList.tail
         val graph =
             new DirectedGraph[Int](lines map ((s: String) => {
                 val edgeElems: Array[String] = s.split(' ')
@@ -153,7 +153,7 @@ class GraphSpec extends FlatSpec with Matchers {
     }
 
     "Large graph 4" should "give correct all pairs shortest paths" in {
-        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Coursera/Algorithms-II/src/test/resources/org/venustus/algorithms/graphs/graph_apsp_g3.txt").getLines.toList.tail
+        val lines = scala.io.Source.fromURL("file:///Users/venkat/Documents/Projects/Algorithms/src/test/resources/org/venustus/algorithms/graphs/graph_apsp_g3.txt").getLines.toList.tail
         val graph =
             new DirectedGraph[Int](lines map ((s: String) => {
                 val edgeElems: Array[String] = s.split(' ')
