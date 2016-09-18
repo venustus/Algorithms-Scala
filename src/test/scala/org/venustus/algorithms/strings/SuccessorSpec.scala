@@ -17,5 +17,6 @@ class SuccessorSpec extends FlatSpec with Matchers {
         Successor.findNextBiggerWord("dhck") should be (Some("dhkc"))
         Successor.findNextBiggerWord("dakc") should be (Some("dcak"))
         Successor.findNextBiggerWord("dkhc") should be (Some("hcdk"))
+        Successor.findNextBiggerWord("abcfzyonlg") should be (Some("abcgflnoyz"))
     }
 }

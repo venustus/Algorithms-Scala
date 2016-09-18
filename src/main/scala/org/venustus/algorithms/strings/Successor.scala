@@ -6,18 +6,20 @@ package org.venustus.algorithms.strings
 object Successor {
 
     /**
-     * Given a word (all lower case without spaces or punctuation), finds the next lexicographically
-     * bigger permutation of the same word. If no such permutation exists, then returns <code>None</code>.
-     *
-     * The main observation is that as long as characters are in decreasing order from the start of the string,
-     * we can't find the next string. We need to manipulate the string only from the point, the characters
-     * start increasing. The first such character should be swapped with the minimum among the subsequent character
-     * and then all the subsequent characters should be sorted (to get the immediately next string).
-     *
-     * Time complexity: O(n) where n is the size of the string
-     * @param str
-     * @return
-     */
+      * Given a word (all lower case without spaces or punctuation), finds the next lexicographically
+      * bigger permutation of the same word. If no such permutation exists, then returns <code>None</code>.
+      *
+      * The main observation is that as long as characters are in increasing order from the end of the string,
+      * we can't find the next string. We need to manipulate the string only from the point, the characters
+      * start decreasing (when going backwards). The first such character should be swapped with the minimum among the subsequent character
+      * and then all the subsequent characters should be sorted (to get the immediately next string).
+      *
+      * abcfdg => abcfgd
+      * Time complexity: O(n) where n is the size of the string
+      *
+      * @param str
+      * @return
+      */
     def findNextBiggerWord(str: String): Option[String] = {
         val chars = str.toCharArray
         var i = chars.size - 1

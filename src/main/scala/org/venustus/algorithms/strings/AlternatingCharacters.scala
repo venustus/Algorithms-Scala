@@ -12,7 +12,7 @@ object AlternatingCharacters {
      * and removing characters in each iteration. But because String is immutable, the only way to
      * do this is to construct a new string in each iteration using a sub string of the previous string.
      * In JDK7, the implementation of <code>substring</code> changed to O(n) from being O(1) in JDK6.
-     * Hence the naive algorithm would end up with time complexity of O(n^2).
+     * Hence the naive algorithm would end up with time complexity of O(n power 2).
      *
      * Using divide and conquer paradigm, however, we can arrive at an efficient algorithm like this:
      *

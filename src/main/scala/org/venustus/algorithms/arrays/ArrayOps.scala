@@ -28,6 +28,9 @@ object ArrayOps {
     /**
      * Partitions a given array according to given partition function, in-place.
      *
+     * We use the {@link reverseInPlace} sub-routine above to merge two sub-arrays
+     * which are already partitioned according to the requirements.
+     *
      * Time complexity: O(n log n)
      * Space complexity: O(1)
      * @param arr
@@ -43,7 +46,6 @@ object ArrayOps {
                 }
             }
             else if(e - s == 1) {
-                return
             }
             else {
                 val mid = s + ((e - s) / 2)
@@ -53,7 +55,7 @@ object ArrayOps {
                 while(first < mid && f(arr(first))) first += 1
                 var second: Int = mid
                 while(second < e && f(arr(second))) second += 1
-                if(first == mid || second == mid) return
+                if(first == mid || second == mid) {}
                 else {
                     reverseInPlace(arr, first, second)
                     reverseInPlace(arr, first, first + (second - mid))
@@ -106,7 +108,7 @@ object ArrayOps {
 
     /**
      * Retrieves the sub array with largest sum in a given integer array.
-     * Algorithm:
+     * Algorithm (Kadene's algorithm):
      * 1) Start with first element and do a linear sweep of the array.
      * 2) At each step, compute and keep track of the maximum sum of any sub-array
      *    ending at the current position. max(i) can be computed based on max(i-1) as follows:
@@ -147,7 +149,7 @@ object ArrayOps {
      */
     def findLoneElement[T](ls: List[T]): T = {
         val s = (Set[T]() /: ls)((acc, elem) => {
-            if (acc contains (elem)) acc - elem
+            if (acc contains elem) acc - elem
             else acc + elem
         })
         s.head

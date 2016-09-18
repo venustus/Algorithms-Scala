@@ -18,7 +18,7 @@ object CatalanNumbers {
      * The optimal sub structure and overlapping sub problems are obvious in this problem.
      * We maintain an array of integers of size n + 1 and iteratively compute larger and larger catalan numbers.
      *
-     * Time complexity: O(n)
+     * Time complexity: O(n^2)
      *
      * @param n
      * @return
