@@ -42,4 +42,13 @@ class ArrayOpsSpec extends FlatSpec with Matchers{
     it should "correctly find largest sum sub array for sample larger arrays" in {
         ArrayOps.getLargestSumContiguousSubsequence(List(10, 20, -5, 6, 8, 4, 9, -4, -3, 12, -2)) should be (0, 9, 57)
     }
+
+    "The function for finding element in matrix" should "correctly find the coordinates" in {
+        ArrayOps findElemInMatrix (Array[Array[Int]](Array[Int](10, 19, 22), Array[Int](15, 20, 24), Array[Int](25, 26, 28)), 20) should be (Some(1, 1))
+    }
+
+    "The function for finding kth smallest element in matrix" should "correctly find the element" in {
+        ArrayOps findKthSmallestElementInMatrix (Array[Array[Int]](Array[Int](10, 19, 22), Array[Int](15, 20, 24), Array[Int](25, 26, 28)), 3) should be (19)
+        ArrayOps findKthSmallestElementInMatrix (Array[Array[Int]](Array[Int](10, 19, 22), Array[Int](15, 20, 24), Array[Int](25, 26, 28)), 4) should be (20)
+    }
 }

@@ -20,6 +20,13 @@ trait PriorityQueue[T] {
     def removeHead: PriorityQueue[T]
 
     /**
+      * Adds a new element to the priority queue and returns the updated one.
+      * @param t
+      * @return
+      */
+    def addElement(t: T): PriorityQueue[T]
+
+    /**
      * Improves key for a specific element from the queue and returns the updated queue.
      * @param elem
      * @return
@@ -33,4 +40,6 @@ trait PriorityQueue[T] {
 
 object PriorityQueue {
     def apply[T <% Ordered[T]](elems: ArrayBuffer[T]) = new PriorityQueueImpl[T](elems)
+
+    def apply[T <% Ordered[T]](elems: Array[T]) = new PriorityQueueImpl[T](ArrayBuffer concat elems)
 }

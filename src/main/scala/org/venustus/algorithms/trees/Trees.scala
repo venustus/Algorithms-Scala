@@ -72,4 +72,25 @@ object Trees {
         ancFound
     }
 
+    /**
+      * Clones a binary tree and returns a reference to the cloned binary tree.
+      *
+      * Time complexity: O(n)
+      * Space complexity: O(n)
+      *
+      * @param t
+      * @tparam T
+      * @return
+      */
+    def cloneBinaryTree[T](t: BinaryTree[T]): BinaryTree[T] = {
+        t.root match {
+            case EmptyNode() => BinaryTree(EmptyNode())
+            case BinaryTreeNode(data, left, right) => {
+                BinaryTree(BinaryTreeNode(data,
+                    cloneBinaryTree(BinaryTree(left)).root,
+                    cloneBinaryTree(BinaryTree(right)).root))
+            }
+        }
+    }
+
 }

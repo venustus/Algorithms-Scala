@@ -68,6 +68,12 @@ class PriorityQueueImpl[T <% Ordered[T]](private val elems: ArrayBuffer[T]) exte
         this
     }
 
+    def addElement(t: T): PriorityQueue[T] = {
+        elems append t
+        heapifyUp (elems.length - 1)
+        this
+    }
+
     /**
      * Improves the key for a specific element from the queue and returns the updated queue.
      * This may internally reorder the queue such that the element is now in its correct

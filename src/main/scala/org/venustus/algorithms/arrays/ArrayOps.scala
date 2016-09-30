@@ -1,5 +1,8 @@
 package org.venustus.algorithms.arrays
 
+import org.venustus.algorithms.arrays.ArrayOps.HeapElement
+import org.venustus.algorithms.priorityqueues.PriorityQueue
+
 /**
  * Created by venkat on 27/08/14.
  */
@@ -153,5 +156,89 @@ object ArrayOps {
             else acc + elem
         })
         s.head
+    }
+
+    /**
+      * Find an element in a m x n matrix in which each row and
+      * each column are in non-decreasing order.
+      *
+      * The trick here is that you can't start at left top or right bottom corner.
+      * Because values are increasing in both ways, you don't know which way to go.
+      *
+      * But if you start at left bottom or right top, then values are decreasing
+      * in one direction and increasing in another direction. So, you can always
+      * take one or the other, depending on target element.
+      *
+      * Time complexity: O(m + n)
+      *
+      * @param arr
+      * @param t
+      * @tparam T
+      * @return the coordinates of the element requested
+      */
+    def findElemInMatrix[T <% Ordered[T]](arr: Array[Array[T]], t: T): Option[(Int, Int)] = {
+        def checkElem(x: Int, y: Int): Option[(Int, Int)] = {
+            if(x < 0 || y >= arr(0).length) None
+            else {
+                if(arr(x)(y) == t) Some((x, y))
+                else {
+                    if(arr(x)(y) < t) checkElem(x, y + 1)
+                    else checkElem(x - 1, y)
+                }
+            }
+        }
+        checkElem(arr.length - 1, 0)
+    }
+
+    /**
+      * Finds and returns kth smallest element in a 2D array in which
+      * each row and each column have elements in non-decreasing order.
+      *
+      * Note that if we could get all of the m*n elements into an array, we can
+      * select kth smallest in O(mn) time, because selection problem is O(n) in worst case
+      * (see Randomized Selection in CLRS). But this doesn't use the row/column-increasing
+      * property of the matrix. So, it must be less than this.
+      *
+      * You can try to eliminate few portions of the matrix - for example if you take the matrix
+      * at the right bottom containing (m-k) * (n-k) elements, that can surely not contain
+      * the kth smallest because these are the biggest elements - but this is not leading to any
+      * structural solution. We've got an oddly shaped matrix to look for, which is not convenient.
+      * Further, k might be > m or > n (as long as it is < mn), so it may not be possible to pick
+      * such a sub-matrix.
+      *
+      * Another thing that comes to mind when thinking about smallest elements is heap. We can easily
+      * pick out smallest elements from a heap. When we turn the matrix 45 degrees clockwise, it sure
+      * looks like a heap. From any given element, you can go either left or right and both are
+      * greater than the element. But when you look carefully, it is not really a heap - because it
+      * is not a complete binary tree. So, you'll have to construct the heap out of it. If you construct
+      * a full heap of size O(mn), then its of no use because we could have used the original algorithm
+      * in that case.
+      *
+      * But perhaps, we don't need to construct a heap of all the elements in the matrix. Let us try by
+      * constructing heap from only first row. We pick out the smallest element and replace it with the one
+      * in the same column as the one that got kicked out. This way, we are always successively picking
+      * out smallest elements. When we do this exactly k times, whatever is left at the root of the heap
+      * is the kth smallest.
+      *
+      * Time complexity: O(m + k log m)
+      *
+      * @param arr
+      * @param k
+      * @tparam T
+      * @return
+      */
+    def findKthSmallestElementInMatrix[T <% Ordered[T]](arr: Array[Array[T]], k: Int): T = {
+        val minHeap: PriorityQueue[HeapElement[T]] = PriorityQueue(arr(0).zipWithIndex map { case (e, i) => HeapElement(e, 0, i)})
+
+        (minHeap /: (1 until k)) ((acc, _) => {
+            val HeapElement(_, p, q) = minHeap.head
+            minHeap.removeHead addElement HeapElement(arr(p + 1)(q), p + 1, q)
+        }).head.elem
+    }
+
+    case class HeapElement[P <% Ordered[P]](elem: P, i: Int, j: Int) extends Ordered[HeapElement[P]] {
+        override def compare(that: HeapElement[P]): Int = {
+            that.elem.compare(this.elem)
+        }
     }
 }
