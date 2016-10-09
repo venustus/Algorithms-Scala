@@ -2,8 +2,10 @@ package org.venustus.algorithms.unionfind
 
 /**
  * Created by venkat on 20/07/14.
+  *
+  * Implements optimized union find data structure
  */
-case class OptimizedUnionFind[T] private (val parents: Map[T, T], val ranks: Map[T, Int]) extends UnionFind[T] {
+case class OptimizedUnionFind[T] private (parents: Map[T, T], ranks: Map[T, Int]) extends UnionFind[T] {
 
     override def getLeaders: Set[T] = {
         (Set[T]() /: parents.keySet)((acc: Set[T], k: T) => acc + (find(k) match { case (leader, _) => leader }))
